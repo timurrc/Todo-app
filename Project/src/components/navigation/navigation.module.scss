@@ -1,0 +1,35 @@
+.navigation {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  flex-flow: column wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navigation {
+  position: relative;
+}
+
+.navigation img {
+  cursor: pointer;
+}
+
+.navigation img::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in;
+}
+
+.navigation img:hover::after {
+  opacity: 1;
+}
