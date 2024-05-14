@@ -1,7 +1,8 @@
 {
-  "name": "todoapp",
-  "private": true,
-  "version": "0.1",
+  "name": "New Day - todo app",
+  "private": false,
+  "author": "Timurrc",
+  "version": "0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",

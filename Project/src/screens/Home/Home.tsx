@@ -6,16 +6,19 @@ import Createtask from "../../components/taskCreation/Createtask";
 interface Task {
   id: number;
   title: string;
+  category: string;
 }
 
 const initialTasks: Task[] = [
   {
     id: 1,
     title: "Take pills",
+    category: "Daily",
   },
   {
     id: 2,
     title: "Go to university",
+    category: "Work",
   },
 ];
 
@@ -42,20 +45,24 @@ const Home: FC = () => {
         <div className={styles.recentTasks}>
           {tasks.map((task: Task) => (
             <div className={styles.recentTasksElements} key={task.id}>
-              <input
-                type="checkbox"
-                onChange={() => handleCheckboxChange(task.id)}
-              />
-              {task.title}
+              <div
+                style={{ display: "flex", gap: "13px", alignItems: "center" }}
+              >
+                <input
+                  type="checkbox"
+                  onChange={() => handleCheckboxChange(task.id)}
+                />
+                <h4>{task.title}</h4>
+              </div>
+              <p style={{ opacity: "30%" }}>{task.category}</p>
             </div>
           ))}
         </div>
       </section>
       <section className={styles.newTodo}>
         <h2>Create task</h2>
-        <div>
-          <Createtask addNewTask={addNewTask} tasks={tasks} />
-        </div>
+
+        <Createtask addNewTask={addNewTask} tasks={tasks} />
       </section>
     </div>
   );

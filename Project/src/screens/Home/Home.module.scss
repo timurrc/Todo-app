@@ -25,10 +25,12 @@
         background-color: #393939;
         display: flex;
         gap: 20px;
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
   .newTodo {
-    margin-top: 14px;
+    margin-top: 36px;
   }
 }
