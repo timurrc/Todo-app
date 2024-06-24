@@ -40,7 +40,12 @@
     border-radius: 5px;
     border: 1px solid #ccc;
   }
-
+  select {
+    padding: 10px 20px;
+  }
+  select option {
+    position: fixed;
+  }
   button {
     padding: 10px 20px;
     background-color: #007bff;
